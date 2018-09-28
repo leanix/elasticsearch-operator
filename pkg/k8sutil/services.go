@@ -165,6 +165,7 @@ func (k *K8sutil) CreateDiscoveryService(clusterName, namespace string) error {
 				},
 			},
 			Spec: v1.ServiceSpec{
+				ClusterIP: "None",
 				Selector: map[string]string{
 					"component": component,
 					"role":      "master",
